@@ -46,6 +46,9 @@ past. Getting to interview someone in person who has worked with web security
 will help greatly with adding a deeper understanding of web application security
 into the paper.
 
+
+Sources:
+
 .. [#f1] Cross, M. (2007). "`Developer's guide to web application security
     <https://simpsoncollege.on.worldcat.org/oclc/85861133>`_". Syngress Pub.
     Retrieved February 8, 2021
