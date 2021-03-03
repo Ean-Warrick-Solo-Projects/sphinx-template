@@ -33,6 +33,7 @@ utilizing preventative measures coded within the application.
     * Proper use cases of client/server interaction (will include code)
 
 * User vulnerabilities (Will refer to [#F2]_)
+
     * User Data (Cookies) (will include images)
     * Cross-site scripting (XSS) (will include images)
     * Clickjacking  (will include images)
