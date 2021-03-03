@@ -1,53 +1,51 @@
-Bibliography
-============
+Web Application Security Outline
+================================
 
-A great start into this subject would be Michael Cross’ book [#f1]_ on
-application security. The book explains what a hacker is, the history of
-hackers, and the book explains the reason behind the hacker's motivation to
-hack. The book also dives into different types of attacks hackers can utilize
-and how to recognize vulnerabilities, while securing your code as well. I can
-use this to help understand what hackers are and the basics of protecting from
-vulnerabilities. It has a wide variety of topics that can be useful to refer to
-when needed.
+**Thesis:** How to secure and protect web applications from hackers
+utilizing preventative measures coded within the application.
 
-Another good source for this subject is Google’s lesson [#f2]_ on browser
-security. The article focuses on three main points: the severity of
-vulnerabilities, the window of vulnerability, and the frequency of exposure.
-Knowing a big tech giant's techniques and methods on security on their own
-browser gives a lot of good insight that others couldn’t replicate. It also is
-good to see how vulnerabilities not only affect websites but also the browser
-the websites are brought up in.
+* Explaining hacking (Will refer to [#f1]_)
 
+    * What is hacking?
+    * Why should we worry about hackers?
+    * Black hat hackers
+    * White hat hackers
 
-Netsparker Security Team had an informative page [#f3]_ on web application
-security. It explains what vulnerability scanners are and how to use them.
-It uses easy to understand language and is great for beginners in the subject.
-It also talks about firewalls and their purpose in security which my other
-sources excluded from talking about. This source will be important in helping
-explain web application security concepts and firewalls.
+* Common hacks and how to protect against them (Will refer to [#f4]_)
 
-NDC held a conference [#f4]_, with Christian Wenz as the speaker, that presents
-the top ten web application security risks. The presentation goes through each
-security risk, explaining how it works and ways to protect against it. This
-source will be helpful because of the list of security risks it presents and
-their explanations. It’s important to know the top security risks out there.
+    * SQL injections (will have code samples)
+    * Broken Authentication exploiting (will have code samples)
+    * Important data accessible to client (will have code samples)
+    * Remote file inclusion (will have code samples)
 
-This article [#f5]_ on semantic web security goes into a deeper understanding
-on the subject compared to the other sources. It works to push the idea of a
-semantic infrastructure. The article works through multiple different scenarios
-in its examples and the infrastructures’ capabilities. Finally, it explains the
-semantic concept of a firewall. This source will be helpful in its high level
-understanding of the concept of web security and its insights on how web
-security infrastructures should be created.
+* Vulnerability scanners (Will refer to [#f3]_)
 
-I’ll be interviewing my Uncle [#f6]_ who works in a related field as the paper
-subject. He has helped companies fix security issues in their systems in the
-past. Getting to interview someone in person who has worked with web security
-will help greatly with adding a deeper understanding of web application security
-into the paper.
-Ean-Warrick-Solo-Projects
+    * What is a vulnerability scanner
+    * Why should we use Vulnerability scanners
+    * How to use vulnerability scanners
+    * What to do when a vulnerability is found.
 
-Sources:
+* Client / Server Checks (Will refer to [#F1]_)
+
+    * Never trust the client (will have image)
+    * Restrict the power of the client
+    * How to set up checks on the client and server (will include code)
+    * Proper use cases of client/server interaction (will include code)
+
+* User vulnerabilities (Will refer to [#F2]_)
+    * User Data (Cookies) (will include images)
+    * Cross-site scripting (XSS) (will include images)
+    * Clickjacking  (will include images)
+    * Uploaded data sanitation (data verification) (will include code)
+
+* Other ways to protect your  (will refer to [#F2]_, [#F5]_, and [#F6]_)
+
+    * Encoding Data
+    * Firewall (image)
+    * HTTPS
+    * Two-Step verification (image)
+
+Footnote Sources:
 
 .. [#f1] Cross, M. (2007). "`Developer's guide to web application security
     <https://simpsoncollege.on.worldcat.org/oclc/85861133>`_". Syngress Pub.
@@ -73,9 +71,3 @@ Sources:
     Retrieved February 8, 2021
 
 .. [#f6] Uncle M. (2021) Personal Interview
-
-
-
-
-
-

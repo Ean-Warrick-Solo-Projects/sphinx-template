@@ -45,7 +45,7 @@ subject. He has helped companies fix security issues in their systems in the
 past. Getting to interview someone in person who has worked with web security
 will help greatly with adding a deeper understanding of web application security
 into the paper.
-
+Ean-Warrick-Solo-Projects
 
 Sources:
 
