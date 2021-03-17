@@ -91,12 +91,14 @@ server-client model.
 
 
 * Data verification (will include images)
+
     * What is data verification
     * Why we verify data
     * How we verify data
 
 
 * Data verification in practice (will include code)
+
     * Client-side verification
     * Client-side verification examples
     * Server side verification
