@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="Docutils 0.16: http://docutils.sourceforge.net/" />
-<title>Web Application Security Outline</title>
+<title>Data Validation and Verification Page 1</title>
 <style type="text/css">
 
 /*
@@ -360,8 +360,8 @@ ul.auto-toc {
 </style>
 </head>
 <body>
-<div class="document" id="web-application-security-outline">
-<h1 class="title">Web Application Security Outline</h1>
+<div class="document" id="data-validation-and-verification-page-1">
+<h1 class="title">Data Validation and Verification Page 1</h1>
 
 <p><strong>Thesis:</strong> Utilizing data validation and data verification in the
 Server-Client model to protect against harmful client input.</p>
@@ -375,7 +375,7 @@ Server-Client model to protect against harmful client input.</p>
 </li>
 </ul>
 <p>The client-server model is the basis in which a server communicates
-to many clients. We utilize this model in our everyday lives, with our
+to many clients <a class="footnote-reference" href="#f1" id="id1">[1]</a>. We utilize this model in our everyday lives, with our
 laptops, phones and smart devices playing the role of the client: requesting
 data from servers.</p>
 <blockquote>
@@ -388,14 +388,13 @@ is reducing the amount of data redundancy. Rather than have all the data stored
 on all of the clients, it's much more efficient to share data from one source
 (in this case the server) between all the clients. It also costs less to
 maintain a server-client model than others.</p>
-<img alt="Page1/internetserver.jpg" src="Page1/internetserver.jpg" style="width: 600px;" />
-<dl class="docutils">
-<dt>[#f</dt>
-<dd><ul class="first last simple">
+<img alt="internetserver.jpg" src="internetserver.jpg" style="width: 500px;" />
+<p><a class="footnote-reference" href="#f3" id="id2">[3]</a></p>
+<blockquote>
+<ul class="simple">
 <li>How does the client access the server?</li>
 </ul>
-</dd>
-</dl>
+</blockquote>
 <p>In order for clients to connect to servers, clients must request a connection.
 The server may accept or reject the connection, whatever is appropriate in the
 circumstance. Different protocols provide different levels and areas of security.
@@ -425,61 +424,67 @@ contain malicious code which could have adverse effects on servers, or even
 other clients.</p>
 <p>Hereâ€™s an example of HTML a malicious user could inject into the code of a website:</p>
 <p>&lt;H1&gt; Vulnerability test &lt;/H1&gt;
-&lt;META HTTP-EQUIV=&quot;refresh&quot; CONTENT=&quot;1;url=http://www.test.com&quot;&gt;</p>
+&lt;META HTTP-EQUIV=&quot;refresh&quot; CONTENT=&quot;1;url=http://www.test.com&quot;&gt;
+<a class="footnote-reference" href="#f2" id="id3">[2]</a></p>
 <p>This code would make it so that clients would be sent to a page of the malicious
 userâ€™s choosing whenever clients refresh the page. This may not be bad if it
-only affects the malicious user, but if there is no data sanitation on the
+only affects the malicious user, but if there is no data sanitation done on the
 server, it could be uploaded to the server and affect every user. To protect
 against this, data validation and data verification can be implemented in the
 server-client model.</p>
+<hr class="docutils" />
 <ul>
-<li><p class="first">Common hacks and how to protect against them (Will refer to <a href="#id9"><span class="problematic" id="id1">[#f4]_</span></a>)</p>
+<li><p class="first">Data validation</p>
 <blockquote>
 <ul class="simple">
-<li>SQL injections (will have code samples)</li>
-<li>Broken Authentication exploiting (will have code samples)</li>
-<li>Important data accessible to client (will have code samples)</li>
-<li>Remote file inclusion (will have code samples)</li>
+<li>What is data validation</li>
+<li>Why we validate data</li>
+<li>How we validate data</li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first">Vulnerability scanners (Will refer to <a href="#id10"><span class="problematic" id="id2">[#f3]_</span></a>)</p>
+<li><p class="first">Data validation in practice</p>
 <blockquote>
 <ul class="simple">
-<li>What is a vulnerability scanner</li>
-<li>Why should we use Vulnerability scanners</li>
-<li>How to use vulnerability scanners</li>
-<li>What to do when a vulnerability is found.</li>
+<li>Server-side validation</li>
+<li>Server-side validation examples</li>
+<li>Client-side validation</li>
+<li>Client-side validation examples</li>
+<li>Reasons for using both server and client validation</li>
+<li>Why data validation isnâ€™t enough</li>
 </ul>
 </blockquote>
 </li>
-<li><p class="first">Client / Server Checks (Will refer to <a class="footnote-reference" href="#f1" id="id3">[1]</a>)</p>
-<blockquote>
-<ul class="simple">
-<li>Never trust the client (will have image)</li>
-<li>Restrict the power of the client</li>
-<li>How to set up checks on the client and server (will include code)</li>
-<li>Proper use cases of client/server interaction (will include code)</li>
+<li><dl class="first docutils">
+<dt>Data verification</dt>
+<dd><ul class="first last simple">
+<li>What is data verification</li>
+<li>Why we verify data</li>
+<li>How we verify data</li>
 </ul>
-</blockquote>
+</dd>
+</dl>
 </li>
-<li><p class="first">User vulnerabilities (Will refer to <a class="footnote-reference" href="#f2" id="id4">[2]</a>)</p>
-<blockquote>
-<ul class="simple">
-<li>User Data (Cookies) (will include images)</li>
-<li>Cross-site scripting (XSS) (will include images)</li>
-<li>Clickjacking  (will include images)</li>
-<li>Uploaded data sanitation (data verification) (will include code)</li>
+<li><dl class="first docutils">
+<dt>Data verification in practice</dt>
+<dd><ul class="first last simple">
+<li>Client-side verification</li>
+<li>Client-side verification examples</li>
+<li>Server side verification</li>
+<li>Server side verification examples</li>
+<li>Pros and cons to verification methods</li>
+<li>Why data verification and data validation should work together</li>
 </ul>
-</blockquote>
+</dd>
+</dl>
 </li>
-<li><p class="first">Other ways to protect your  (will refer to <a class="footnote-reference" href="#f2" id="id5">[2]</a>, <a href="#id11"><span class="problematic" id="id6">[#F5]_</span></a>, and <a href="#id12"><span class="problematic" id="id7">[#F6]_</span></a>)</p>
+<li><p class="first">Conclusion</p>
 <blockquote>
 <ul class="simple">
-<li>Encoding Data</li>
-<li>Firewall (image)</li>
-<li>HTTPS</li>
-<li>Two-Step verification (image)</li>
+<li>The Client-server model is prevalent today</li>
+<li>The client-server model has vulnerabilities</li>
+<li>Data verification and data validation can help mitigate these
+vulnerabilities</li>
 </ul>
 </blockquote>
 </li>
@@ -488,35 +493,24 @@ server-client model.</p>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id3">[1]</a></td><td>Christensson, Per. &quot;<a class="reference external" href="https://techterms.com/definition/client-server_model">Client-Server Model Definition</a>&quot;.
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Christensson, Per. &quot;<a class="reference external" href="https://techterms.com/definition/client-server_model">Client-Server Model Definition</a>&quot;.
 TechTerms. Sharpened Productions, 17 June 2016. Web. 16 March 2021.</td></tr>
 </tbody>
 </table>
 <table class="docutils footnote" frame="void" id="f2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[2]</td><td><em>(<a class="fn-backref" href="#id4">1</a>, <a class="fn-backref" href="#id5">2</a>)</em> Skynet_Code. &quot;<a class="reference external" href="http://www.codeproject.com/Articles/134024/HTML-and-JavaScript-Injection">HTML and JavaScript Injection</a>&quot;.
+<tr><td class="label"><a class="fn-backref" href="#id3">[2]</a></td><td>Skynet_Code. &quot;<a class="reference external" href="http://www.codeproject.com/Articles/134024/HTML-and-JavaScript-Injection">HTML and JavaScript Injection</a>&quot;.
 CodeProject, 7 Dec. 2010.</td></tr>
 </tbody>
 </table>
-<div class="system-messages section">
-<h1>Docutils System Messages</h1>
-<div class="system-message" id="id8">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">C:/Users/eanwa/Desktop/sphinx-template/source/Page1/index.rst</tt>, line 70)</p>
-Too many autonumbered footnote references: only 0 corresponding footnotes available.</div>
-<div class="system-message" id="id9">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">C:/Users/eanwa/Desktop/sphinx-template/source/Page1/index.rst</tt>, line 70); <em><a href="#id1">backlink</a></em></p>
-Unknown target name: &quot;f4&quot;.</div>
-<div class="system-message" id="id10">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">C:/Users/eanwa/Desktop/sphinx-template/source/Page1/index.rst</tt>, line 77); <em><a href="#id2">backlink</a></em></p>
-Unknown target name: &quot;f3&quot;.</div>
-<div class="system-message" id="id11">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">C:/Users/eanwa/Desktop/sphinx-template/source/Page1/index.rst</tt>, line 98); <em><a href="#id6">backlink</a></em></p>
-Unknown target name: &quot;f5&quot;.</div>
-<div class="system-message" id="id12">
-<p class="system-message-title">System Message: ERROR/3 (<tt class="docutils">C:/Users/eanwa/Desktop/sphinx-template/source/Page1/index.rst</tt>, line 98); <em><a href="#id7">backlink</a></em></p>
-Unknown target name: &quot;f6&quot;.</div>
-</div>
+<table class="docutils footnote" frame="void" id="f3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id2">[3]</a></td><td>W3schools.
+&quot;<a class="reference external" href="http://www.w3schools.in/what-is-client-server-architecture">What Is Client-Server Architecture? W3schools Online Programming Tutorials.</a>&quot;.</td></tr>
+</tbody>
+</table>
 </div>
 </body>
 </html>
