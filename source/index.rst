@@ -9,5 +9,6 @@ Web security project.
 
    outline/index
    bibliography/index
+   newoutline/index
    Page1/index
 

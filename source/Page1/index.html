@@ -380,19 +380,19 @@ laptops, phones and smart devices playing the role of the client: requesting
 data from servers.</p>
 <blockquote>
 <ul class="simple">
-<li>Why to use client-server model</li>
+<li>Why to use the client-server model</li>
 </ul>
 </blockquote>
 <p>There are many reasons why we use the client-server model. One of the reasons
 is reducing the amount of data redundancy. Rather than have all the data stored
-on all of the clients, it's much more efficient to share data from one source
+on all of the clients, it is much more efficient to share data from one source
 (in this case the server) between all the clients. It also costs less to
 maintain a server-client model than others.</p>
 <img alt="internetserver.jpg" src="internetserver.jpg" style="width: 500px;" />
 <p><a class="footnote-reference" href="#f3" id="id2">[3]</a></p>
 <blockquote>
 <ul class="simple">
-<li>How does the client access the server?</li>
+<li>How the client accesses the server</li>
 </ul>
 </blockquote>
 <p>In order for clients to connect to servers, clients must request a connection.
@@ -422,12 +422,13 @@ manipulate data they send to the server, which could possibly break the function
 of servers not expecting the type of input. Even worse, manipulated data can
 contain malicious code which could have adverse effects on servers, or even
 other clients.</p>
-<p>Hereâ€™s an example of HTML a malicious user could inject into the code of a website:</p>
+<p>Here is an example of HTML a malicious user could inject into the code of a
+website:</p>
 <p>&lt;H1&gt; Vulnerability test &lt;/H1&gt;
 &lt;META HTTP-EQUIV=&quot;refresh&quot; CONTENT=&quot;1;url=http://www.test.com&quot;&gt;
 <a class="footnote-reference" href="#f2" id="id3">[2]</a></p>
 <p>This code would make it so that clients would be sent to a page of the malicious
-userâ€™s choosing whenever clients refresh the page. This may not be bad if it
+users choosing whenever clients refresh the page. This may not be bad if it
 only affects the malicious user, but if there is no data sanitation done on the
 server, it could be uploaded to the server and affect every user. To protect
 against this, data validation and data verification can be implemented in the
@@ -451,7 +452,7 @@ server-client model.</p>
 <li>Client-side validation</li>
 <li>Client-side validation examples</li>
 <li>Reasons for using both server and client validation</li>
-<li>Why data validation isnâ€™t enough</li>
+<li>Data validation isn not enough alone</li>
 </ul>
 </blockquote>
 </li>
