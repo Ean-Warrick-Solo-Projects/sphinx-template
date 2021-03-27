@@ -365,19 +365,17 @@ ul.auto-toc {
 
 <p><strong>Thesis:</strong> Utilizing data validation and data verification within the
 server-client model to protect against potentially harmful client input.</p>
-<ul>
-<li><p class="first">Introduction</p>
 <blockquote>
 <ul class="simple">
-<li>The client-server model</li>
+<li>Introduction: The client-server model</li>
 </ul>
 </blockquote>
-</li>
-</ul>
-<p>The client-server model is the basis in which a server communicates
-to many clients <a class="footnote-reference" href="#f1" id="id1">[1]</a>. We utilize this model in our everyday lives, with our
-laptops, phones and smart devices playing the role of the client: requesting
-data from servers.</p>
+<p>The client-server model is the basis in which a server communicates to many
+clients <a class="footnote-reference" href="#f1" id="id1">[1]</a>. When using technology devices on the internet, usually the
+device plays the role of the client. As example, gamers use this when playing
+online multiplayer games. Online gamers, who are the client, send information of
+their inputs to the server which the server sends back information back to all
+of the clients, such as opponent player location and the game state.</p>
 <blockquote>
 <ul class="simple">
 <li>Why to use the client-server model</li>
@@ -387,9 +385,9 @@ data from servers.</p>
 is reducing the amount of data redundancy. Rather than have all the data stored
 on all of the clients, it is much more efficient to share data from one source
 (in this case the server) between all the clients. It also costs less to
-maintain a server-client model than others.</p>
+maintain a server-client model than other models.</p>
 <img alt="internetserver.jpg" src="internetserver.jpg" style="width: 500px;" />
-<p>Image source <a class="footnote-reference" href="#f3" id="id2">[3]</a></p>
+<p>Image from W3Schools <a class="footnote-reference" href="#f3" id="id2">[3]</a></p>
 <blockquote>
 <ul class="simple">
 <li>How the client accesses the server</li>
@@ -397,18 +395,26 @@ maintain a server-client model than others.</p>
 </blockquote>
 <p>In order for clients to connect to servers, clients must request a connection.
 The server may accept or reject the connection, whatever is appropriate in the
-circumstance. Different protocols provide different levels and areas of security.
-How a server maintains a connection is dependent on the protocol itâ€™s using.
-The client can send requests and data to servers.</p>
+circumstance. How the connection is handled is determined by the protocols.
+Protocols refers to the method and execution of data transmission through a
+connection. Different protocols provide different levels, areas of security
+and speed of transfer. The most commonly used protocols are UDP, HTTP, and FTP.
+Through connections with servers, clients can send requests in which servers
+respond by sending information back to the client. Clients can also use
+connections to send data to servers, which servers can utilize. As an example,
+when uploading a profile picture to a social media, that photo is sent as data
+to a server, which receives the image and stores it on the server.</p>
 <blockquote>
 <ul class="simple">
 <li>How the server talks to clients</li>
 </ul>
 </blockquote>
 <p>Servers respond to client requests through their connections.
-The server receives the request, sees if it has what the client is
-looking for, and promptly returns either what the client was looking for,
-or otherwise an error message.</p>
+When a server receives a request from a client, such as a request of a page
+on the internet, the server will first look at what the client is wanting to
+request. The server looks through its resources in order to see if it has what
+the client is requesting. If the resource is found, the server will send a copy
+back to the client through its established connection.</p>
 <blockquote>
 <ul class="simple">
 <li>Never trust the client</li>
@@ -424,15 +430,21 @@ contain malicious code which could have adverse effects on servers, or even
 other clients.</p>
 <p>Here is an example of HTML a malicious user could inject into the code of a
 website:</p>
-<p>&lt;H1&gt; Vulnerability test &lt;/H1&gt;
-&lt;META HTTP-EQUIV=&quot;refresh&quot; CONTENT=&quot;1;url=http://www.test.com&quot;&gt;
-<a class="footnote-reference" href="#f2" id="id3">[2]</a></p>
+<pre class="code html literal-block">
+<span class="punctuation">&lt;</span><span class="name tag">H1</span><span class="punctuation">&gt;</span> Vulnerability test <span class="punctuation">&lt;/</span><span class="name tag">H1</span><span class="punctuation">&gt;</span>
+<span class="punctuation">&lt;</span><span class="name tag">META</span> <span class="name attribute">HTTP-EQUIV</span><span class="operator">=</span><span class="literal string">&quot;refresh&quot;</span> <span class="name attribute">CONTENT</span><span class="operator">=</span><span class="literal string">&quot;1;url=http://www.test.com&quot;</span><span class="punctuation">&gt;</span>
+</pre>
+<p><a class="footnote-reference" href="#f2" id="id3">[2]</a></p>
 <p>This code would make it so that clients would be sent to a page of the malicious
-users choosing whenever clients refresh the page. This may not be bad if it
-only affects the malicious user, but if there is no data sanitation done on the
-server, it could be uploaded to the server and affect every user. To protect
-against this, data validation and data verification can be implemented in the
-server-client model.</p>
+users choosing whenever clients refresh the page. In the example,
+the HTTP-EQUIV=&quot;refresh&quot;
+represents the action of refreshing the web page, followed by
+CONTENT=&quot;1;url=http://www.test.com&quot;
+which is the page that is returned when the page is refreshed. This may not be
+bad if it only affects the malicious user, but if there is no data sanitation
+done on the server, it could be uploaded to the server and affect every user. To
+protect against this, data validation and data verification can be implemented
+in the server-client model.</p>
 <hr class="docutils" />
 <ul>
 <li><p class="first">Data validation (Will include images representing
